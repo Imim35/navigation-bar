@@ -21,9 +21,7 @@
       <navigation-bar-card-main :iconPosition="iconPosition" :selectedIcon="selectedIcon.name" :options="options" :card="card" />
     </transition>
 
-
   </div>
-
 </template>
 
 <script>
@@ -42,9 +40,7 @@
         selectedIcon : {},
         icons: [
           { id:1, name: 'Контакты', iconName: 'contacts', componentName: 'Contacts' },
-          { id:2, name: 'Общаг', iconName: 'assignment', componentName: 'General' },
-          { id:3, name: 'Общаг', iconName: 'assignment', componentName: 'General' },
-          { id:4, name: 'Общаг', iconName: 'assignment', componentName: 'General' },
+          { id:2, name: 'Общаг', iconName: 'assignment', componentName: 'General' }
         ]
       }
     },
@@ -63,7 +59,6 @@
         // lazy рендер карточки
         this.card = () => import(`@/views/navigationBar/navigationBar${icon.componentName}`)
 
-        // this.$store.dispatch('temporary/plugins/navigation_bar/getPage', { page: icon,iconPosition: event.target.getBoundingClientRect().left })
 
         if(this.navigation.card) {
           if(element.classList.contains('selected')) {

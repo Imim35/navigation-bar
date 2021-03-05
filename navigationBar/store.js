@@ -3,7 +3,7 @@ export default {
   state  : {
     card   : false,
     menu   : true,
-    page   : null
+    // page   : null
   },
   modules: {},
   getters: {},
